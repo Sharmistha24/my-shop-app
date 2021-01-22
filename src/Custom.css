@@ -67,3 +67,12 @@ body {
 	font-size: 1.2rem;
 	color: rgb(248, 74, 6);
 }
+
+.small-font-design {
+	font-size: 60%;
+}
+
+.big-font-size {
+	font-size: medium;
+	font-weight: 700 !important;
+}

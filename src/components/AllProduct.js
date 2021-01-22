@@ -23,13 +23,13 @@ export default class Product extends Component {
                                     <img src={image_src} alt="product image" className="card-img-top" />
                                 </Link>
 
-                                <p className="align-self-center font-weight-bold mb-0 mt-1 ml-2">
+                                <p className="align-self-center big-font-size  mb-0 mt-1 ml-2">
                                     {vendor}
                                 </p>
                                 <p className="align-self-center mb-0 ml-2">
-                                    <small className="text-secondary">{name}</small>
+                                    <p className="text-secondary">{name}</p>
                                 </p>
-                                <p className="align-self-center font-weight-bold mb-0 ml-2">
+                                <p className="align-self-center big-font-size  mb-0 ml-2">
                                     <span>$</span>{price}
                                 </p>
                                 {/* <button className="cart-btn" onClick={() => { console.log("added to the cart") }}></button> */}
