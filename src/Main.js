@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
-import { storeProducts } from './data';
+import { storeDatas } from './data';
 
-const ProductContext = React.createContext();
+const ProductsContext = React.createContext();
 
 
-class ProductProvider extends Component {
+class ProductsProvider extends Component {
     state = {
         products: [],
-        storeProducts: storeProducts,
+        storeDatas: storeDatas,
         cart: [],
         cartTotal: 0
     }
@@ -28,7 +27,7 @@ class ProductProvider extends Component {
 
     setProducts = () => {
         let tempProducts = []
-        storeProducts.forEach(item => {
+        storeDatas.forEach(item => {
             const singleItem = { ...item };
             tempProducts = [...tempProducts, singleItem];
         });
@@ -60,7 +59,7 @@ class ProductProvider extends Component {
     handleDetails = (id) => {
         const product = this.getItem(id);
         this.setState(() => {
-            return { storeProducts: product }
+            return { storeDatas: product }
         })
     }
 
@@ -124,7 +123,7 @@ class ProductProvider extends Component {
 
     render() {
         return (
-            <ProductContext.Provider value={{
+            <ProductsContext.Provider value={{
                 ...this.state,
                 handleDetails: this.handleDetails,
                 addToShopingCart: this.addToShopingCart,
@@ -133,11 +132,11 @@ class ProductProvider extends Component {
                 deleteItem: this.deleteItem
             }}>
                 {this.props.children}
-            </ProductContext.Provider>
+            </ProductsContext.Provider>
         )
     }
 }
 
-const ProductConsumer = ProductContext.Consumer;
+const ProductsConsumer = ProductsContext.Consumer;
 
-export { ProductProvider, ProductConsumer }
+export { ProductsProvider, ProductsConsumer }

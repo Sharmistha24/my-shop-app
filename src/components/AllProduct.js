@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { ProductConsumer } from '../Context';
+import { ProductsConsumer } from '../Main';
 
 import styled from 'styled-components';
 
@@ -14,7 +14,7 @@ export default class Product extends Component {
         return (
             <ProoductWrapper className="col-9 col-md-6 col-lg-3 my-3">
                 <div className="card border-0">
-                    <ProductConsumer>
+                    <ProductsConsumer>
                         {(value) => (
                             <div onClick={() =>
                                 value.handleDetails(id)
@@ -36,7 +36,7 @@ export default class Product extends Component {
                             </div>
                         )}
 
-                    </ProductConsumer>
+                    </ProductsConsumer>
                 </div>
             </ProoductWrapper>
         )

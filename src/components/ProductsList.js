@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
-import Title from './Title';
-import { ProductConsumer } from '../Context';
-import Product from './Product';
+import TitlePage from './TitlePage';
+import { ProductsConsumer } from '../Main';
+import AllProduct from './AllProduct';
 
-export default class ProductList extends Component {
+export default class ProductsList extends Component {
 
     // state = {
     //     products: 
@@ -24,15 +23,15 @@ export default class ProductList extends Component {
             <React.Fragment>
                 <div className="py-5">
                     <div className="container">
-                        <Title name="all" title="Products" />
+                        <TitlePage name="all" title="Products" />
                         <div className="row">
-                            <ProductConsumer>
+                            <ProductsConsumer>
                                 {value => {
                                     return value.products.map(product => {
-                                        return <Product key={product.id} product={product} />
+                                        return <AllProduct key={product.id} product={product} />
                                     })
                                 }}
-                            </ProductConsumer>
+                            </ProductsConsumer>
                         </div>
                     </div>
 

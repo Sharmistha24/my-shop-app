@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { ProductProvider } from './Context';
+import { ProductsProvider } from './Main';
 
 import './index.css';
 import App from './App';
@@ -10,11 +10,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <ProductProvider>
+  <ProductsProvider>
     <Router>
       <App />
     </Router>
-  </ProductProvider>,
+  </ProductsProvider>,
 
   document.getElementById('root')
 );

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { ProductConsumer } from '../Context';
+import { ProductsConsumer } from '../Main';
 
 export default class DetailsPage extends Component {
     render() {
         return (
-            <ProductConsumer>
+            <ProductsConsumer>
                 {(value) => {
-                    const { id, vendor, name, image_src, price } = value.storeProducts;
+                    const { id, vendor, name, image_src, price } = value.storeDatas;
                     return (
                         <div className="container py-5">
                             <div className="row">
@@ -48,7 +48,7 @@ export default class DetailsPage extends Component {
                         </div>
                     )
                 }}
-            </ProductConsumer>
+            </ProductsConsumer>
         )
     }
 }

@@ -1,4 +1,4 @@
-export const storeProducts =
+export const storeDatas =
     [
         {
             "id": 1,
