@@ -27,7 +27,7 @@ export default class Product extends Component {
                                     {vendor}
                                 </p>
                                 <p className="align-self-center mb-0 ml-2">
-                                    <p className="text-secondary">{name}</p>
+                                    <p className="text-secondary small-font-design">{name}</p>
                                 </p>
                                 <p className="align-self-center big-font-size  mb-0 ml-2">
                                     <span>$</span>{price}
