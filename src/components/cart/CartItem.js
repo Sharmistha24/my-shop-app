@@ -13,11 +13,11 @@ export default function CartItem({ item, value }) {
 
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-lg-none">Product : </span>
+                <span className="d-lg-none medium-font">Product : </span>
                 {name}
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-lg-none">Price : </span>
+                <span className="d-lg-none medium-font">Price : </span>
                 ${price}
             </div>
             <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
